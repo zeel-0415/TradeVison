@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  background: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px; /* Adjusted to match the screenshot */
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 8px 0; /* Adjusted padding */
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em; /* Added for better text spacing */
+}
+
+.toggle-btn.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #d1d5db;
+}
+
+.dropdown {
+  position: relative;
+  margin-bottom: 16px; /* Adjusted to match the screenshot */
+}
+
+.dropdown-selected {
+  background-color: white;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.dropdown-selected:hover {
+  border
+
+-color: #d1d5db;
+}
+
+.dropdown-arrow {
+  font-size: 10px; /* Adjusted to match the screenshot */
+  transition: transform 0.3s ease;
+}
+
+.dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 4px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown.open .dropdown-options {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #e5e7eb; /* Added to match the screenshot's separators */
+}
+
+.dropdown-option:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.dropdown-option:hover {
+  background-color: #f3f4f6;
+}
+
+.strategy-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Adjusted to match the screenshot */
+}
+
+.strategy {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px; /* Oval-shaped edges as requested */
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.strategy-name {
+  flex: 1;
+  text-align: left;
+}
+
+.strategy-count {
+  color: #6b7280; /* Light gray color to match the screenshot */
+  font-weight: 400;
+}
+
+.strategy:nth-child(1) { animation-delay: 0.1s; }
+.strategy:nth-child(2) { animation-delay: 0.2s; }
+.strategy:nth-child(3) { animation-delay: 0.3s; }
+.strategy:nth-child(4) { animation-delay: 0.4s; }
+.strategy:nth-child(5) { animation-delay: 0.5s; }
+
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

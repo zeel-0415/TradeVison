@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategy UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="toggle-container" id="viewToggle">
+      <button class="toggle-btn" data-view="Bullish">BULLISH</button>
+      <button class="toggle-btn active" data-view="Bearish">BEARISH</button>
+      <button class="toggle-btn" data-view="RangeBound">RANGEBOUND</button>
+      <button class="toggle-btn" data-view="Volatile">VOLATILE</button>
+    </div>
+
+    <div class="dropdown" id="dateDropdown">
+      <div class="dropdown-selected">
+        <span id="selectedDate">Select Date</span>
+        <span class="dropdown-arrow">▼</span>
+      </div>
+      <div class="dropdown-options hidden" id="dateOptions"></div>
+    </div>
+
+    <div id="strategyContainer" class="strategy-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
